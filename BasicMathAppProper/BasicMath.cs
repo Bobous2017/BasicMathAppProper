@@ -12,6 +12,7 @@ namespace BasicMathAppProper
         public static int Subtract(int a, int b) => a - b;
         public static int Multiply(int a, int b) => a + b; // Should be a * b
         public static int Divide(int a, int b) => a * b; // Should be a / b, and no zero check here
+
     }
 }
 
