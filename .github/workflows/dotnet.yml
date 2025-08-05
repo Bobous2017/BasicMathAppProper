@@ -23,8 +23,8 @@ jobs:
     - name: Build
       run: dotnet build BasicMathAppProper.sln --no-restore --configuration Release
 
-    - name: Test Debug
+    - name: Test
       run: dotnet test BasicMathAppProper.sln --configuration Debug --no-build
-    
-    - name: Test Release
-      run: dotnet test BasicMathAppProper.sln --configuration Release --no-build
+      
+    - name: Show Test Code
+      run: cat BasicMathApp.Tests/UnitTest1.cs
