@@ -24,4 +24,4 @@ jobs:
       run: dotnet build BasicMathAppProper.sln --no-restore --configuration Release
 
     - name: Test
-      run: dotnet test BasicMathAppProper.sln --no-build --verbosity normal
+      run: dotnet test BasicMathAppProper.sln --configuration Release --no-build --verbosity normal
