@@ -24,5 +24,6 @@ jobs:
       run: dotnet build --no-restore --configuration Release
 
     - name: Run tests
-      run: dotnet test BasicMathAppProper.sln --no-build --verbosity normal --logger:"console;verbosity=detailed"
+      run: dotnet test BasicMathAppProper/BasicMathApp.Tests/BasicMathApp.Tests.csproj --no-build --verbosity normal
+
 
