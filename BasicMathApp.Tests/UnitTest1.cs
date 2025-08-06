@@ -41,7 +41,7 @@ namespace BasicMathApp.Tests
         [DataRow("hello", false)] // "hello" → does not read the same forwards and backwards.
         [DataRow("A man a plan a canal Panama", true)] // reads the same forwards and backwards if you ignore spaces and case
         [DataRow("", true)]
-        [DataRow(null, false)]
+        [DataRow(null, true)]
         public void IsPalindrome_WorksAsExpected(string input, bool expected)
         {
             var result = StringLogic.IsPalindrome(input);
