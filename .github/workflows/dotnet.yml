@@ -23,5 +23,5 @@ jobs:
     - name: Build
       run: dotnet build BasicMathAppProper.sln --no-restore --configuration Debug
 
-    - name: Test All
+    - name: Test 3
       run: dotnet test BasicMathAppProper.sln --configuration Debug --no-build --verbosity normal
