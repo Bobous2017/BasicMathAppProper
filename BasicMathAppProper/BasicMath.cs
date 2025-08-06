@@ -14,5 +14,16 @@ namespace BasicMathAppProper
         public static int Divide(int a, int b) => a / b; // Should be a / b, and no zero check here
 
     }
+
+    public static class StringLogic
+    {
+        public static bool IsPalindrome(string input)
+        {
+            if (input == null) return false;
+            var trimmed = input.Replace(" ", "").ToLowerInvariant();
+            var reversed = new string(trimmed.Reverse().ToArray());
+            return trimmed == reversed;
+        }
+    }
 }
 

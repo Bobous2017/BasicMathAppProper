@@ -1,7 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BasicMathAppProper;
 namespace BasicMathApp.Tests
 {
+    // If your BasicMath methods are implemented as shown, all these tests should pass.
     [TestClass]
     public class UnitTest1
     {
@@ -27,6 +28,24 @@ namespace BasicMathApp.Tests
         public void Divide_ShouldReturnCorrectQuotient()
         {
             Assert.AreEqual(2, BasicMath.Divide(10, 5));
+        }
+
+    }
+
+    // The test expects IsPalindrome to return true for palindromes (ignoring spaces and case), and false otherwise.
+    [TestClass]
+    public class StringLogicTests
+    {
+        [DataTestMethod]
+        [DataRow("racecar", true)] // "racecar" → reads the same forwards and backwards.
+        [DataRow("hello", false)] // "hello" → does not read the same forwards and backwards.
+        [DataRow("A man a plan a canal Panama", true)] // reads the same forwards and backwards if you ignore spaces and case
+        [DataRow("", true)]
+        [DataRow(null, false)]
+        public void IsPalindrome_WorksAsExpected(string input, bool expected)
+        {
+            var result = StringLogic.IsPalindrome(input);
+            Assert.AreEqual(expected, result);
         }
     }
 }
