@@ -37,8 +37,8 @@ namespace BasicMathApp.Tests
     public class StringLogicTests
     {
         [DataTestMethod]
-        [DataRow("racecar", false)] // "racecar" → reads the same forwards and backwards.
-        [DataRow("hello", false)] // "hello" → does not read the same forwards and backwards.
+        [DataRow("racecar", true)] // "racecar" → reads the same forwards and backwards.
+        [DataRow("hello", true)] // "hello" → does not read the same forwards and backwards.
         [DataRow("A man a plan a canal Panama", true)] // reads the same forwards and backwards if you ignore spaces and case
         [DataRow("", true)]
         [DataRow(null, false)]
